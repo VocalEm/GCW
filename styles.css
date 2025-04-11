@@ -732,32 +732,161 @@ body.body_game {
   cursor: pointer;
 }
 
-.facebook-slider {
-  background-color: white;
-  width: 60%;
-  height: 9rem;
-  overflow-x: scroll;
+.facebook-slider-container {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  width: 60%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.facebook-slider {
+  display: flex;
+  align-items: center;
   gap: 1rem;
-  background: transparent;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0.5rem;
+}
+
+.right-arrow {
+  right: 0.5rem;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .facebook-post {
   min-width: 30%;
-  max-height: 70%;
-  height: 70%;
   background-color: white;
-  height: 90%;
   margin: 0 0.5rem;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 12px 10px 28px -9px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 12px 10px 28px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 12px 10px 28px -9px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Outfit", sans-serif;
+  height: auto; /* Allow height to adjust dynamically */
+  max-height: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide overflowing content */
+  cursor: pointer;
+}
+
+.facebook-post p {
+  word-wrap: break-word; /* Ensure long words break to fit within the card */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
 }
 
 .facebook-slider::-webkit-scrollbar {
   display: none; /* Oculta la scrollbar en navegadores basados en WebKit (Chrome, Edge, Safari) */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  gap: 1rem;
+  border-bottom: 0.05rem solid black;
+  padding: 0.3rem;
+}
+
+.post-img {
+  background-color: green;
+  width: 4rem;
+  height: 4rem;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.post-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/*-------------------FANPAGE-----------------------*/
+
+.main_fanpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.form_fanpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  max-width: 600px;
+}
+
+.textarea_fanpage {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-family: var(--font-1);
+  font-size: 1.2rem;
+  border: 2px solid var(--color-3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-6);
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.textarea_fanpage:focus {
+  outline: none;
+  border-color: var(--color-3);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.button_fanpage {
+  background-color: var(--color-3);
+  color: var(--color-6);
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-family: var(--font-1);
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_fanpage:hover {
+  background-color: var(--color-2);
+  transform: scale(1.05);
 }

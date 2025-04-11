@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="main_index" id="main_index">
@@ -45,41 +51,23 @@
         >
           Settings
         </a>
+        <a
+          href="fanpage.html"
+          class="option_text"
+          id="continue_main"
+          name="continue_main"
+        >
+          Settings
+        </a>
       </div>
     </main>
-    <div class="facebook-slider">
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
+    <div class="facebook-slider-container">
+      <button class="slider-arrow left-arrow" id="left-arrow">&#9664;</button>
+      <div class="facebook-slider" id="facebook-slider">
+        <!-- Facebook posts will be dynamically loaded here -->
       </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
-      <div class="facebook-post">
-        <h3>Nombre Pagina</h3>
-        <p>descripcion</p>
-      </div>
+      <button class="slider-arrow right-arrow" id="right-arrow">&#9654;</button>
     </div>
+    <script src="../app.js"></script>
   </body>
 </html>
